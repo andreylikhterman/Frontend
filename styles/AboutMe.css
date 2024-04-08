@@ -9,6 +9,7 @@ body {
   margin: 0;
   position: static;
   top: 0;
+  overflow: hidden;
   background-color: #0b1622;
   padding: 10px 20px;
 }
