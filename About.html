@@ -13,21 +13,19 @@
 </head>
 
 <body>
-  <header>
-    <div class="header">
+  <header class="header">
       <img src="images/computer.WebP" alt="icon">
       <div class="header-right">
 
+        <button class="change_theme" id = "change_theme">Светлая тема</button>
         <a class="active" href="#home">Главная</a>
         <a href="#aboutme">Обо мне</a>
         <a href="#footer">Контакты</a>
 
       </div>
-
-    </div>
   </header>
 
-  <section class="main">
+  <section class="Block main" id = "home">
         <div class="main__name"><h2>Андрей Лихтерман</h2></div>
         <div class="main__image">
             <img class="main__image-me" src="images/Myphoto.WebP" alt="Photo_with_me">
@@ -35,7 +33,7 @@
   </section>
 
 
-  <section class="AboutMe" id = "aboutme">
+  <section class="Block AboutMe" id = "aboutme">
 
     <div class= "AboutMe__information">
       <ul>
@@ -50,7 +48,7 @@
 
   </section>
 
-  <section class="education">
+  <section class="Block education">
 
     <div class="education__name">
         <h2>Образование</h2>
@@ -64,7 +62,7 @@
         </div>
 
         <div class = "education__information-university">
-            <p>МФТИ ВШПИ (в процессе)</p>
+            <p class="timer">МФТИ ВШПИ</p>
             <img class="image__university" src="images/MIPT.WebP" alt="МФТИ">
         </div>
 
@@ -72,7 +70,7 @@
 
   </section>
 
-  <section class="interests">
+  <section class="Block interests">
     <div class="interests__information">
 
         <div class="interests__information-running">
@@ -93,8 +91,30 @@
 
   </section>
 
+  <section class="Block images">
+    <div class="images__name">
+        <h2>Галерея</h2>
+    </div>
+    <div class="images__container">
+        <div class="popup__images-image"><img src="images/img1.webp" alt=""></div>
+        <div class="popup__images-image"><img src="images/img2.webp" alt=""></div>
+        <div class="popup__images-image"><img src="images/img3.webp" alt=""></div>
+        <div class="popup__images-image"><img src="images/img4.webp" alt=""></div>
+        <div class="popup__images-image"><img src="images/img5.webp" alt=""></div>
+        <div class="popup__images-image"><img src="images/img6.webp" alt=""></div>
+    </div>
+
+    <div class="popup__container">
+        <span>&times;</span>
+        <img src="images/img1.webp" alt="">
+        <button class="prev-button" id = "prev-button">&lt;</button>
+        <button class="next-button" id = "next-button">&gt;</button>
+    </div>
+
+  </section>
 
   <footer class="footer" id="footer">
+      <button class="feedback-opening-link" id = "feedback-opening-link">Обратная связь</button>
       <p>Контакты</p>
       <div class="footer__links">
           <a href="https://t.me/Andrey_Likhterman" target="_blank" ><img class="icon" src="images/telegram.ico" alt="Telegram"></a>
@@ -103,6 +123,40 @@
           <a href="tel:+79626624766" target="_blank"><img class="icon" src="images/telephone.ico" alt="Telephone"></a>
       </div>
   </footer>
+
+   <div class="popup-container feedback-form-container feedback-form-container--closed" id="feedback-form">
+      <div class="popup">
+        <div class="popup-form-container">
+          <form action="javascript:void(0);" id="form-1" method="post" name="article">
+            <h2>Отзыв</h2>
+            <div class="form-item name-box">
+              <p>Ваше имя</p>
+              <input type="text" id="name" required pattern="[A-za-zА-Яа-я\-']+">
+              <div class="form-item error-message name-error"></div>
+            </div>
+            <div class="form-item email-box">
+              <p>Почта</p>
+              <input type="email" id="email" required pattern=".+@.*.+\.[A-Za-z]+[A-Za-z]+">
+              <div class="form-item error-message email-error"></div>
+            </div>
+            <div class="form-item feedback-box" required>
+              <p>Обращение</p>
+              <textarea id="feedback" rows="5" cols="30"></textarea>
+              <div class="form-item error-message feedback-error" required></div>
+            </div>
+            <button type="submit" class="form-item submit-button">Отправить</button>
+          </form>
+        </div>
+        <div class="popup-background"></div>
+      </div>
+    </div>
+
+  <div id="darker">
+      <span class="closebtn" id = "closebtn">&times;</span>
+      <p>Как вам моя страничка?</p>
+  </div>
+
+  <script src="/scripts/script.js"></script>
 
 </body>
 </html>
