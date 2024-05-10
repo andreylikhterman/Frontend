@@ -16,9 +16,8 @@ body {
   background-color: #0b1622;
 }
 
-.header img {
-  margin: 1vw 2vw 1vw 2vw;
-  height: 6vw;
+#cube-svg {
+  margin: 1.5vw 2vw 1.5vw 2vw;
 }
 
 .header a {
@@ -259,6 +258,7 @@ body.dark-theme {
  justify-content: center;
  border-radius: 10px;
  padding-left: 10px;
+  z-index: 10;
 }
 
 .closebtn {
@@ -383,7 +383,7 @@ body.dark-theme {
   font-size: 14px;
   border-radius: 70px;
   color: black;
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 .feedback-opening-link:hover {
@@ -428,7 +428,15 @@ body.dark-theme {
   scale: 1;
   border: 1px solid black;
   margin: 0;
+  opacity: 1;
+  animation: fade 0.7s linear;
 }
+
+@keyframes fade {
+  0%{ opacity: 0 }
+  100% { opacity: 1 }
+}
+
 
 .feedback-form-container--closed {
   scale: 0;
@@ -491,4 +499,14 @@ body.dark-theme {
   width: 100vw;
   height: 100vh;
   z-index: -1;
+}
+
+svg {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+rect {
+  transition: transform 0.5s ease-in-out;
 }

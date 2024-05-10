@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b36aa38f-df1d-4b89-98bb-94c029831ef7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/images/img1.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/img2.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/img3.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/img4.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/img5.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/img6.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/About.html" beforeDir="false" afterPath="$PROJECT_DIR$/About.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Feedback.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/AboutMe.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/AboutMe.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +45,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scripts" />
       <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -74,21 +70,16 @@
       <workItem from="1714635590778" duration="5994000" />
       <workItem from="1714744033849" duration="972000" />
       <workItem from="1714934382932" duration="1850000" />
+      <workItem from="1714936488644" duration="1474000" />
+      <workItem from="1714938379698" duration="511000" />
+      <workItem from="1714988343525" duration="3714000" />
+      <workItem from="1714996034643" duration="2350000" />
+      <workItem from="1715001207769" duration="2344000" />
+      <workItem from="1715021679546" duration="599000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/scripts/script.js</url>
-          <line>40</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

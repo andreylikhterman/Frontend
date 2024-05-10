@@ -14,7 +14,11 @@
 
 <body>
   <header class="header">
-      <img src="images/computer.WebP" alt="icon">
+      <svg id="cube-svg" height="4.5vw" width="4.5vw">
+  <!-- Define the cube's dimensions and shape -->
+  <g transform="translate(100, 100)">
+  </g>
+</svg>
       <div class="header-right">
 
         <button class="change_theme" id = "change_theme">Светлая тема</button>
@@ -31,7 +35,6 @@
             <img class="main__image-me" src="images/Myphoto.WebP" alt="Photo_with_me">
         </div>
   </section>
-
 
   <section class="Block AboutMe" id = "aboutme">
 
@@ -124,7 +127,7 @@
       </div>
   </footer>
 
-   <div class="popup-container feedback-form-container feedback-form-container--closed" id="feedback-form">
+   <div class="popup__container feedback-form-container feedback-form-container--closed" id="feedback-form">
       <div class="popup">
         <div class="popup-form-container">
           <form action="javascript:void(0);" id="form-1" method="post" name="article">
@@ -156,7 +159,13 @@
       <p>Как вам моя страничка?</p>
   </div>
 
-  <script src="scripts/script.js"></script>
+  <script src="scripts/Animation.js"></script>
+  <script src="scripts/ChangeTheme.js"></script>
+  <script src="scripts/Feedback.js"></script>
+  <script src="scripts/Menu.js"></script>
+  <script src="scripts/Popup_images.js"></script>
+  <script src="scripts/Popup_message.js"></script>
+  <script src="scripts/Time.js"></script>
 
 </body>
 </html>
