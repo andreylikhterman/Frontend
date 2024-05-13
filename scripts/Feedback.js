@@ -71,8 +71,6 @@ class FormValidation {
       badInput: '',
       customError: '',
       patternMismatch: 'Используйте латиницу и кирилицу, а также символы \' и -',
-      rangeOverflow: 'Введите целое число от 10 до 100 включительно',
-      rangeUnderflow: 'Введите целое число от 10 до 100 включительно',
       stepMismatch: '',
       tooLong: '',
       tooShort: '',
@@ -96,7 +94,7 @@ class FormValidation {
     span.innerText = '';
   }
 
-  setRightButtonState = (inputList, button) => {
+  setButtonState = (inputList, button) => {
     button.disabled = false;
     inputList.forEach(input => {
       if (input.required && input.value == '') {
@@ -112,7 +110,7 @@ class FormValidation {
     // check if we need to disable button
     const inputList = form.querySelectorAll('input, textarea');
     const button = form.querySelector('button[type="submit"]');
-    this.setRightButtonState(inputList, button);
+    this.setButtonState(inputList, button);
     // check input validity
     if (!input.validity.valid) {
       const errorKey = Object.keys(this.errors).find(el => input.validity[el]);
@@ -132,14 +130,13 @@ class FormValidation {
   setInputEventListenter = (form) => {
     const inputList = form.querySelectorAll('input, textarea');
     const button = form.querySelector('button[type="submit"]');
-    this.setRightButtonState(inputList, button);
+    this.setButtonState(inputList, button);
     inputList.forEach(input => {
       input.addEventListener('input', () => {
         this.isValid(form, input)
       });
     });
   }
-
   setValidationForAllForms = () => {
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {
