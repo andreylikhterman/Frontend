@@ -28,27 +28,13 @@ class FeedbackPopup {
   }
 
   preventAndOpenPopup = (event) => {
-    event.preventDefault();
     this.openPopup();
-  }
-
-  keyboardListener = (event) => {
-    let keyName = event.key;
-    if (this.isOpened) {
-      switch (keyName) {
-        case "Escape":
-          this.closePopup();
-          break;
-      }
-    }
   }
 
   registerEventListeners = () => {
     this.openingLink.addEventListener('click', this.preventAndOpenPopup);
-    document.addEventListener('keydown', this.keyboardListener);
     this.background.addEventListener('click', this.closePopup);
-    this.submitButton.addEventListener('click', async (event) => {
-      event.preventDefault();
+    this.submitButton.addEventListener('click', async () => {
       this.submitButton.disabled = true;
       this.submitButton.textContent = "Отправка, подождите";
       await new Promise(_ => setTimeout(_, 3000));
@@ -60,7 +46,6 @@ class FeedbackPopup {
 }
 
 class FormValidation {
-
   constructor() {
     this.setErrors();
     this.setValidationForAllForms();
