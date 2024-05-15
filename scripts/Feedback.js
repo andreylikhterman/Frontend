@@ -55,7 +55,7 @@ class FormValidation {
     this.errors = {
       badInput: '',
       customError: '',
-      patternMismatch: 'Используйте латиницу и кирилицу, а также символы \' и -',
+      patternMismatch: 'Номер телефона в формате +79998887766',
       stepMismatch: '',
       tooLong: '',
       tooShort: '',
