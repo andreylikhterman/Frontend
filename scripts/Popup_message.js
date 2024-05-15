@@ -1,5 +1,7 @@
 function windowUp () {
-  document.getElementById('darker').style.display = "block";
+  if (!sessionStorage.getItem('Closed')) {
+    document.getElementById('darker').style.display = "block";
+  }
 }
 
 window.onload = () => {
@@ -8,6 +10,7 @@ window.onload = () => {
 
 var close = document.getElementById("closebtn");
 close.addEventListener("click", function () {
+  sessionStorage.setItem('Closed', true);
   this.parentElement.style.display='none';
-  document.body.style.backgroundColor = back_color
+  document.body.style.backgroundColor = back_color;
 });
