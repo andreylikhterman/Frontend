@@ -82,10 +82,13 @@ class FormValidation {
   setButtonState = (inputList, button) => {
     button.disabled = false;
     inputList.forEach(input => {
-      if (input.required && input.value == '') {
+      if (input.required && input.value === '') {
         button.disabled = true;
       }
-      if (!input.validity.valid) {
+      if (input.value === '') {
+        button.disabled = true;
+      }
+      if(!input.validity.valid) {
         button.disabled = true;
       }
     });
@@ -107,7 +110,7 @@ class FormValidation {
     } else {
       this.hideInputError(form, input);
     }
-    if (input.value === '') {
+    if (input.value === '' && input.id !== 'feedback') {
       this.hideInputError(form, input);
     }
   }
