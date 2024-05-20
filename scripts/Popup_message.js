@@ -6,7 +6,7 @@ function windowUp () {
 }
 
 window.onload = () => {
-  setTimeout('windowUp();', 5000);
+  setTimeout('windowUp();', 30000);
 };
 
 var close = document.getElementById("closebtn");
